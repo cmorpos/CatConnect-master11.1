@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block title %}
+  Add a Cat
+{% endblock %}
+
+{% block content %}
+<body class="text-center">
+    <div class="container">
+        <form method="POST" class="form-signin" style="color:white">
+            {{ form.hidden_tag() }}
+            <h1 class="h3 mb-3 font-weight-normal">
+                Add a Cat
+            </h1>
+            <br>
+            {{ form.cat_name.label() }}
+            {{ form.cat_name(class="form-control", placeholder="Cat Name") }}
+
+            {{ form.cat_age.label() }}
+            {{ form.cat_age(class="form-control", placeholder="Cat Age") }}
+
+            {{ form.cat_breed.label() }}
+            {{ form.cat_breed(class="form-control", placeholder="Cat Breed") }}
+
+            {{ form.cat_description.label() }}
+            {{ form.cat_description(class="form-control", placeholder="Cat Description") }}
+
+            <br>
+
+            {{ form.submit(class="btn btn-lg btn-block btn-primary") }}
+
+        </form>
+    </div>
+</body>
+
+
+
+{% endblock %}
